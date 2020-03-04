@@ -19,24 +19,21 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn">Dropdown</button>
-                                <div class="dropdown-content">
-                                    
-                                    <a href="@Html.ActionLink("Home", "Index", "Home")">Home</a>
-                                    <a href="@Html.ActionLink("About Us", "About", "Home")">about</a>
-                                    <a href="@Html.ActionLink("Contact Us", "Contact", "Home")"></a>
-                                    
-                                </div>
-                        </div>
-                    </li>
 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li class="dropdown-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="dropdown-item">@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li class="dropdown-item">@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

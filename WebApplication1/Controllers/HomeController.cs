@@ -19,6 +19,12 @@ namespace WebApplication1.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
+            var name = "test name";
+            var id = "0123";
+
+            //using (var db = new Model1()) { }
+            
+
             return View();
         }
 
