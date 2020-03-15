@@ -18,25 +18,29 @@
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
 
-                <div class="dropdown">
+            <div class="navbar-collapse collapse" align="center" style="margin-left: 150px;">
+                <div>
+                    @Html.ActionLink("Home", "Index", "Home")
+                    @Html.ActionLink("About Us", "About", "Home")
+                    @Html.ActionLink("Contact Us", "Contact", "Home")
+                </div>
+
+                <div class="dropdown" float="left">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
+                        Projects
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <ul>
-                            <li class="dropdown-item">@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="dropdown-item">@Html.ActionLink("About Us", "About", "Home")</li>
-                            <li class="dropdown-item">@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        </ul>
+
+                        @Html.ActionLink("D&D name generator", "NameGenerator", "DND")<br />
+                        @Html.ActionLink("D&D ability score generator", "AbilityScoreGenerator", "DND")<br />
 
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
